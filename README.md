@@ -1,1 +1,1 @@
-# memory-card
+This Odin Project assignment represents an introduction to working with function-based components in React.  The useState and useEffect hooks are used to modify components' state.  
