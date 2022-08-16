@@ -1,14 +1,11 @@
 import React from "react";
 
-import { Header } from "./Header";
-
-import { CardContainer } from "./CardContainer";
+import { GameContainer } from "./GameContainer";
 
 function MainContainer() {
   return (
     <div className="main-container">
-      <Header />
-      <CardContainer />
+      <GameContainer />
     </div>
   );
 }
