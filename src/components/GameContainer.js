@@ -6,12 +6,16 @@ import { CardOverview } from "./CardOverview";
 
 import uniqid from "uniqid";
 
+import jan from "../images/jan-skylar.jpg";
+
+import logo from "../logo.svg";
+
 function GameContainer() {
   const [state, setState] = useState({
     score: 0,
     highScore: 0,
     cards: [
-      { imageSrc: "one", imageAlt: "one", id: uniqid() },
+      { imageSrc: `${jan}`, imageAlt: "one", id: uniqid() },
       { imageSrc: "two", imageAlt: "two", id: uniqid() },
       { imageSrc: "three", imageAlt: "three", id: uniqid() },
     ],
