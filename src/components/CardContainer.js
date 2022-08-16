@@ -13,11 +13,28 @@ function CardContainer() {
       { imageSrc: "two", imageAlt: "two", id: uniqid() },
       { imageSrc: "three", imageAlt: "three", id: uniqid() },
     ],
+    clicked: [],
   });
+
+  const handleClick = (e) => {
+    console.log(e.target.id);
+    let currentState = { ...state };
+    let currentClicked = currentState.clicked;
+    console.log(currentClicked);
+
+    let currentId = e.target.id;
+
+    currentClicked.push(currentId);
+
+    setState({
+      ...state,
+      clicked: currentClicked,
+    });
+  };
 
   return (
     <div className="card-container">
-      <CardOverview schools={state.cards} />
+      <CardOverview cards={state.cards} handleClick={handleClick} />
     </div>
   );
 }

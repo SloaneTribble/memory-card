@@ -7,3 +7,14 @@
 .header{
     border: solid 1px black;
 }
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.card{
+    border: solid 1px black;
+    height: 2rem;
+    flex: 1;
+}
