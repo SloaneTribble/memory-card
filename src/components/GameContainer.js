@@ -22,8 +22,6 @@ import tayne from "../images/tayne.jpg";
 import wayne from "../images/wayne-jan.jpeg";
 import wizard from "../images/wizard.jpg";
 
-import logo from "../logo.svg";
-
 function GameContainer() {
   const [state, setState] = useState({
     score: 0,
@@ -40,6 +38,12 @@ function GameContainer() {
         id: uniqid(),
       },
       { imageSrc: `${mark}`, imageAlt: "Mark Proksch", id: uniqid() },
+      { imageSrc: `${steve}`, imageAlt: "Dr. Steve Brule", id: uniqid() },
+      {
+        imageSrc: `${wizard}`,
+        imageAlt: "Wizard from Kandle Krush",
+        id: uniqid(),
+      },
     ],
     clicked: [],
     clickCount: 0,
@@ -49,16 +53,16 @@ function GameContainer() {
     { imageSrc: `${carol}`, imageAlt: "Carol Krabbit", id: uniqid() },
     { imageSrc: `${david}`, imageAlt: "David Liebe-hart", id: uniqid() },
     { imageSrc: `${doris}`, imageAlt: "Doris Pringle-Brule", id: uniqid() },
+    { imageSrc: `${doug}`, imageAlt: "Doug Prishpreed", id: uniqid() },
+    { imageSrc: `${jan}`, imageAlt: "Jan Skylar", id: uniqid() },
   ];
 
   const levelThreeCards = [
-    { imageSrc: "seven", imageAlt: "seven", id: uniqid() },
-    {
-      imageSrc: "eight",
-      imageAlt: "eight",
-      id: uniqid(),
-    },
-    { imageSrc: "nine", imageAlt: "nine", id: uniqid() },
+    { imageSrc: `${pablo}`, imageAlt: "Pablo Meyers", id: uniqid() },
+    { imageSrc: `${pierre}`, imageAlt: "Pierre", id: uniqid() },
+    { imageSrc: `${scott}`, imageAlt: "Scott Clam", id: uniqid() },
+    { imageSrc: `${tayne}`, imageAlt: "Tayne", id: uniqid() },
+    { imageSrc: `${wayne}`, imageAlt: "Wayne and Jan Skylar", id: uniqid() },
   ];
 
   const handleClick = (e) => {
@@ -96,18 +100,24 @@ function GameContainer() {
           id: uniqid(),
         },
         { imageSrc: `${mark}`, imageAlt: "Mark Proksch", id: uniqid() },
+        { imageSrc: `${steve}`, imageAlt: "Dr. Steve Brule", id: uniqid() },
+        {
+          imageSrc: `${wizard}`,
+          imageAlt: "Wizard from Kandle Krush",
+          id: uniqid(),
+        },
       ];
     } else {
       currentScore++;
       currentClickCount++;
       currentClicked.push(currentId);
 
-      if (currentClickCount === 3) {
+      if (currentClickCount === 5) {
         console.log("Level Two");
         currentCards = currentCards.concat(levelTwoCards);
       }
 
-      if (currentClickCount === 6) {
+      if (currentClickCount === 10) {
         console.log("Level Three");
         currentCards = currentCards.concat(levelThreeCards);
       }
@@ -124,7 +134,7 @@ function GameContainer() {
   };
 
   return (
-    <div className="card-container">
+    <div className="game-container">
       <Header score={state.score} highScore={state.highScore} />
       <CardOverview cards={state.cards} handleClick={handleClick} />
     </div>
