@@ -6,7 +6,21 @@ import { CardOverview } from "./CardOverview";
 
 import uniqid from "uniqid";
 
+import carol from "../images/carol.jpeg";
+import david from "../images/david-liebe-hart.jpg";
+import decker from "../images/decker.png";
+import doris from "../images/doris.jpg";
+import doug from "../images/doug-prishpreed.jpg";
 import jan from "../images/jan-skylar.jpg";
+import kington from "../images/kington.jpeg";
+import mark from "../images/mark-proksch.png";
+import pablo from "../images/pablo-meyers.jpg";
+import pierre from "../images/pablo-meyers.jpg";
+import scott from "../images/scott-clam.jpg";
+import steve from "../images/steve-brule.jpeg";
+import tayne from "../images/tayne.jpg";
+import wayne from "../images/wayne-jan.jpeg";
+import wizard from "../images/wizard.jpg";
 
 import logo from "../logo.svg";
 
@@ -15,18 +29,26 @@ function GameContainer() {
     score: 0,
     highScore: 0,
     cards: [
-      { imageSrc: `${jan}`, imageAlt: "one", id: uniqid() },
-      { imageSrc: "two", imageAlt: "two", id: uniqid() },
-      { imageSrc: "three", imageAlt: "three", id: uniqid() },
+      {
+        imageSrc: `${decker}`,
+        imageAlt: "Special Agent Jack Decker",
+        id: uniqid(),
+      },
+      {
+        imageSrc: `${kington}`,
+        imageAlt: "Master Codebreaker Kington",
+        id: uniqid(),
+      },
+      { imageSrc: `${mark}`, imageAlt: "Mark Proksch", id: uniqid() },
     ],
     clicked: [],
     clickCount: 0,
   });
 
   const levelTwoCards = [
-    { imageSrc: "four", imageAlt: "four", id: uniqid() },
-    { imageSrc: "five", imageAlt: "five", id: uniqid() },
-    { imageSrc: "six", imageAlt: "six", id: uniqid() },
+    { imageSrc: `${carol}`, imageAlt: "Carol Krabbit", id: uniqid() },
+    { imageSrc: `${david}`, imageAlt: "David Liebe-hart", id: uniqid() },
+    { imageSrc: `${doris}`, imageAlt: "Doris Pringle-Brule", id: uniqid() },
   ];
 
   const levelThreeCards = [
@@ -63,9 +85,17 @@ function GameContainer() {
       currentClicked = [];
       currentClickCount = 0;
       currentCards = [
-        { imageSrc: "one", imageAlt: "one", id: uniqid() },
-        { imageSrc: "two", imageAlt: "two", id: uniqid() },
-        { imageSrc: "three", imageAlt: "three", id: uniqid() },
+        {
+          imageSrc: `${decker}`,
+          imageAlt: "Special Agent Jack Decker",
+          id: uniqid(),
+        },
+        {
+          imageSrc: `${kington}`,
+          imageAlt: "Master Codebreaker Kington",
+          id: uniqid(),
+        },
+        { imageSrc: `${mark}`, imageAlt: "Mark Proksch", id: uniqid() },
       ];
     } else {
       currentScore++;

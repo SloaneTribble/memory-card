@@ -2,7 +2,6 @@ import React from "react";
 
 function Header(props) {
   let currentScore = props.score;
-  console.log(currentScore);
 
   let currentHighScore = props.highScore;
 
