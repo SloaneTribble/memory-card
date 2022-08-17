@@ -1,6 +1,7 @@
 .main-container{
     min-height: 100vh;
-    min-width: 100vw;
+    width: 100vw;
+    min-width: 600px;
     border: solid 1px black;
 }
 
@@ -15,6 +16,7 @@
 
 .card-overview{
     display: grid;
+    align-items: center;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(5, 1fr);
 }
@@ -24,6 +26,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
     height: 20vh;
     width: auto;
 }

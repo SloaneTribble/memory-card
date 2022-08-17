@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 
-function CardOverview({ cards, handleClick }) {
+function CardOverview({ cardCount, cards, handleClick }) {
   let cardArray = cards;
   let overview;
 
   shuffle(cardArray);
+
+  console.log(cardArray);
+
+  console.log("card count: " + cardCount);
+
+  cardArray.splice(cardCount);
+  console.log(cardArray);
 
   overview = cardArray.map((card) => (
     <div id={card.id} className="card" onClick={handleClick} key={card.id}>

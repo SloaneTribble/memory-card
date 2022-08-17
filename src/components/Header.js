@@ -7,7 +7,10 @@ function Header(props) {
 
   return (
     <div className="header">
-      <span>Memorial Flurry</span>
+      <div className="title-container">
+        <h1>Memorial Flurry</h1>
+      </div>
+
       <div className="score">Score: {currentScore}</div>
       <div className="high-score">High Score: {currentHighScore}</div>
     </div>
