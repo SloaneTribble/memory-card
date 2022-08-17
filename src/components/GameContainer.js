@@ -4,6 +4,8 @@ import { Header } from "./Header";
 
 import { CardOverview } from "./CardOverview";
 
+import { Explanation } from "./Explanation";
+
 import uniqid from "uniqid";
 
 import carol from "../images/carol.jpeg";
@@ -15,7 +17,7 @@ import jan from "../images/jan-skylar.jpg";
 import kington from "../images/kington.jpeg";
 import mark from "../images/mark-proksch.png";
 import pablo from "../images/pablo-meyers.jpg";
-import pierre from "../images/pablo-meyers.jpg";
+import pierre from "../images/pierre.jpg";
 import scott from "../images/scott-clam.jpg";
 import steve from "../images/steve-brule.jpeg";
 import tayne from "../images/tayne.jpg";
@@ -47,6 +49,7 @@ function GameContainer() {
     ],
     clicked: [],
     clickCount: 0,
+    level: 1,
   });
 
   const levelTwoCards = [
@@ -73,10 +76,8 @@ function GameContainer() {
     let currentHighScore = currentState.highScore;
     let currentId = e.target.id;
     let currentClickCount = currentState.clickCount;
+    let currentLevel = currentState.level;
     let currentCards = currentState.cards;
-
-    console.log(currentClicked);
-    console.log(currentCards);
 
     // If id has been clicked, if score > highScore, highScore = score; score = 0; clicked = []
 
@@ -88,6 +89,7 @@ function GameContainer() {
       currentScore = 0;
       currentClicked = [];
       currentClickCount = 0;
+      currentLevel = 0;
       currentCards = [
         {
           imageSrc: `${decker}`,
@@ -115,11 +117,15 @@ function GameContainer() {
       if (currentClickCount === 5) {
         console.log("Level Two");
         currentCards = currentCards.concat(levelTwoCards);
+        currentLevel = 2;
+        currentClicked = [];
       }
 
-      if (currentClickCount === 10) {
+      if (currentClickCount === 15) {
         console.log("Level Three");
         currentCards = currentCards.concat(levelThreeCards);
+        currentLevel = 3;
+        currentClicked = [];
       }
       console.log(currentClicked);
     }
@@ -130,6 +136,7 @@ function GameContainer() {
       cards: currentCards,
       clicked: currentClicked,
       clickCount: currentClickCount,
+      level: currentLevel,
     });
   };
 
@@ -137,6 +144,7 @@ function GameContainer() {
     <div className="game-container">
       <Header score={state.score} highScore={state.highScore} />
       <CardOverview cards={state.cards} handleClick={handleClick} />
+      <Explanation />
     </div>
   );
 }
