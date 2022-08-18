@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.6cacd456.css",
+    "main.js": "/memory-card/static/js/main.405fddba.js",
+    "static/js/787.d6a8b40f.chunk.js": "/memory-card/static/js/787.d6a8b40f.chunk.js",
+    "static/media/manuel.png": "/memory-card/static/media/manuel.35d455c681db0872d522.png",
+    "static/media/mark-proksch.png": "/memory-card/static/media/mark-proksch.b44e6d80fae9da1fdc5c.png",
+    "static/media/laroux.jpeg": "/memory-card/static/media/laroux.ebcc656b21161fba2271.jpeg",
+    "static/media/decker.png": "/memory-card/static/media/decker.8364d2fe998e00104969.png",
+    "static/media/davidson.jpg": "/memory-card/static/media/davidson.b76d78479cd9f780ed00.jpg",
+    "static/media/tairy-green.jpg": "/memory-card/static/media/tairy-green.1369776952c4e3f5cd35.jpg",
+    "static/media/jan-skylar.jpg": "/memory-card/static/media/jan-skylar.d51601158baf98fbfb1e.jpg",
+    "static/media/toni.jpg_large": "/memory-card/static/media/toni.52243d9bd32aec647f4b.jpg_large",
+    "static/media/doug-prishpreed.jpg": "/memory-card/static/media/doug-prishpreed.0c5f3ca0c825cbda387e.jpg",
+    "static/media/tayne.jpg": "/memory-card/static/media/tayne.b02cb61d29c66530afb1.jpg",
+    "static/media/scott-clam.jpg": "/memory-card/static/media/scott-clam.1eff547fdca767396364.jpg",
+    "static/media/pablo-meyers.jpg": "/memory-card/static/media/pablo-meyers.5b00ff899242a2060725.jpg",
+    "static/media/steve-brule.jpeg": "/memory-card/static/media/steve-brule.731cac315e04659329ec.jpeg",
+    "static/media/pierre.jpg": "/memory-card/static/media/pierre.460d869e4f169fffeba5.jpg",
+    "static/media/axiom.jpg": "/memory-card/static/media/axiom.3bb80c51ebc330aed878.jpg",
+    "static/media/david-liebe-hart.jpg": "/memory-card/static/media/david-liebe-hart.24ff099fc3affe1c8a5f.jpg",
+    "static/media/wizard.jpg": "/memory-card/static/media/wizard.0ce1705d3d0961e81558.jpg",
+    "static/media/doris.jpg": "/memory-card/static/media/doris.7e547b261cd0078c764a.jpg",
+    "index.html": "/memory-card/index.html",
+    "main.6cacd456.css.map": "/memory-card/static/css/main.6cacd456.css.map",
+    "main.405fddba.js.map": "/memory-card/static/js/main.405fddba.js.map",
+    "787.d6a8b40f.chunk.js.map": "/memory-card/static/js/787.d6a8b40f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6cacd456.css",
+    "static/js/main.405fddba.js"
+  ]
+}
