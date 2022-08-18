@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+
 html,
 body,
 *{
@@ -8,9 +12,8 @@ body,
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Aboreto', cursive;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
