@@ -137,7 +137,7 @@ function GameContainer() {
         currentCards = cards.slice(0, -1);
       }
 
-      if (currentClickCount === 1) {
+      if (currentClickCount === 20) {
         setGameOver({
           gameOver: true,
         });
