@@ -1,3 +1,6 @@
+:root{
+    --shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
 
 .main-container{
     position: relative;
@@ -8,7 +11,7 @@
 }
 
 .game-container{
-    background-color:#3999bb;
+    background: linear-gradient(#3999bb, white);
     height: 100vh;
     width: 100vw;
     display: grid;
@@ -16,13 +19,17 @@
 }
 
 .header{
-    background-color: peachpuff;
+    background: radial-gradient(closest-corner, #6f3fa6, #ebf8e1, #f69d3c);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border: solid 1px black;
     box-shadow: 0 8px 6px -6px black;
+}
+
+.score{
+    font-weight:bold;
 }
 
 .card-overview{
@@ -43,6 +50,16 @@
     width: auto;
 }
 
+.explanation{
+    border: groove 3px black;
+    background-color:rgb(252, 181, 119);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
 .modal{
     min-height: 100vh;
     min-width: 100vw;
@@ -55,6 +72,8 @@
 
 }
 
+
+
 form{
     display: flex;
     justify-content: space-evenly;
@@ -64,8 +83,11 @@ form{
     width: 400px;
     margin: auto;
     margin-top: 100px;
-    border: solid 1px black;
+    border: outset 3px beige;
     background-color: beige;
+    box-shadow: var(--shadow);
+    
+
 }
 
 img{
@@ -78,6 +100,8 @@ img{
 }
 
 button {
+    font-family: inherit;
+    font-weight: bold;
     border-top: 1px solid #96d1f8;
     background: #630054;
     background: -webkit-gradient(linear, left top, left bottom, from(#753e9c), to(#630054));
@@ -94,8 +118,7 @@ button {
     box-shadow: rgba(0,0,0,1) 0 1px 0;
     text-shadow: rgba(0,0,0,.4) 0 1px 0;
     color: white;
-    font-size: 15px;
-    font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+    font-size: 1.2rem;
     text-decoration: none;
     vertical-align: middle;
     }
