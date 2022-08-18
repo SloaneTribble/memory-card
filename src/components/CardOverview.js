@@ -3,8 +3,6 @@ import React from "react";
 function CardOverview({ cards, handleClick }) {
   let cardArray = cards;
 
-  console.log(cardArray);
-
   let overview;
 
   shuffle(cardArray);

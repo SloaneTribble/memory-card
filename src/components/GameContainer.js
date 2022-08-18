@@ -6,8 +6,16 @@ import { CardOverview } from "./CardOverview";
 
 import { Explanation } from "./Explanation";
 
+import { Modal } from "./Modal";
+
 import uniqid from "uniqid";
 
+import tairy from "../images/tairy-green.jpg";
+import axiom from "../images/axiom.jpg";
+import joe from "../images/davidson.jpg";
+import laroux from "../images/laroux.jpeg";
+import manuel from "../images/manuel.png";
+import toni from "../images/toni.jpg_large";
 import carol from "../images/carol.jpeg";
 import david from "../images/david-liebe-hart.jpg";
 import decker from "../images/decker.png";
@@ -43,7 +51,13 @@ function GameContainer() {
       imageAlt: "Wizard from Kandle Krush",
       id: uniqid(),
     },
+    { imageSrc: `${axiom}`, imageAlt: "Axiom from DKR", id: uniqid() },
+    { imageSrc: `${joe}`, imageAlt: "Joe Estevez", id: uniqid() },
+    { imageSrc: `${laroux}`, imageAlt: "Laroux", id: uniqid() },
+    { imageSrc: `${manuel}`, imageAlt: "Manuel from DKR", id: uniqid() },
+    { imageSrc: `${toni}`, imageAlt: "Toni Newman", id: uniqid() },
     { imageSrc: `${carol}`, imageAlt: "Carol Krabbit", id: uniqid() },
+
     { imageSrc: `${david}`, imageAlt: "David Liebe-hart", id: uniqid() },
     { imageSrc: `${doris}`, imageAlt: "Doris Pringle-Brule", id: uniqid() },
     { imageSrc: `${doug}`, imageAlt: "Doug Prishpreed", id: uniqid() },
@@ -52,14 +66,15 @@ function GameContainer() {
     { imageSrc: `${pierre}`, imageAlt: "Pierre", id: uniqid() },
     { imageSrc: `${scott}`, imageAlt: "Scott Clam", id: uniqid() },
     { imageSrc: `${tayne}`, imageAlt: "Tayne", id: uniqid() },
+    { imageSrc: `${tairy}`, imageAlt: "Tairy Green", id: uniqid() },
     { imageSrc: `${wayne}`, imageAlt: "Wayne and Jan Skylar", id: uniqid() },
   ];
 
   shuffle(cards);
 
-  let levelOneCards = cards.slice(10);
+  let levelOneCards = cards.slice(16);
 
-  let levelTwoCards = cards.slice(5);
+  let levelTwoCards = cards.slice(11);
 
   const [state, setState] = useState({
     score: 0,
@@ -71,8 +86,11 @@ function GameContainer() {
     level: 1,
   });
 
+  const [gameOver, setGameOver] = useState({
+    gameOver: false,
+  });
+
   const handleClick = (e) => {
-    console.log(e.target.id);
     let currentState = { ...state };
     let currentClicked = currentState.clicked;
     let currentScore = currentState.score;
@@ -90,6 +108,9 @@ function GameContainer() {
       if (currentScore > currentHighScore) {
         currentHighScore = currentScore;
       }
+      shuffle(cards);
+      levelOneCards = cards.slice(16);
+      levelTwoCards = cards.slice(11);
       currentScore = 0;
       currentClicked = [];
       currentClickCount = 0;
@@ -102,7 +123,6 @@ function GameContainer() {
       currentClicked.push(currentId);
 
       if (currentClickCount === 5) {
-        console.log("Level Two");
         currentCardCount = 10;
         currentLevel = 2;
         currentClicked = [];
@@ -114,9 +134,14 @@ function GameContainer() {
         currentCardCount = 15;
         currentLevel = 3;
         currentClicked = [];
-        currentCards = cards;
+        currentCards = cards.slice(0, -1);
       }
-      console.log(currentClicked);
+
+      if (currentClickCount === 1) {
+        setGameOver({
+          gameOver: true,
+        });
+      }
     }
 
     setState({
@@ -135,6 +160,7 @@ function GameContainer() {
       <Header score={state.score} highScore={state.highScore} />
       <CardOverview cards={state.cards} handleClick={handleClick} />
       <Explanation />
+      <Modal gameOver={gameOver.gameOver} />
     </div>
   );
 }

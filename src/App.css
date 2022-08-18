@@ -1,4 +1,5 @@
 .main-container{
+    position: relative;
     min-height: 100vh;
     width: 100vw;
     min-width: 600px;
@@ -31,6 +32,31 @@
     width: auto;
 }
 
+.modal{
+    min-height: 100vh;
+    min-width: 100vw;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.462);
+    display: flex;
+  
+}
+
+form{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    width: 400px;
+    margin: auto;
+    margin-top: 100px;
+    border: solid 1px black;
+    background-color: beige;
+}
+
 img{
     height: 100%;
     width: 100%;
@@ -39,3 +65,36 @@ img{
     margin-left: auto;
     margin-right: auto;
 }
+
+button {
+    border-top: 1px solid #96d1f8;
+    background: #630054;
+    background: -webkit-gradient(linear, left top, left bottom, from(#753e9c), to(#630054));
+    background: -webkit-linear-gradient(top, #753e9c, #630054);
+    background: -moz-linear-gradient(top, #753e9c, #630054);
+    background: -ms-linear-gradient(top, #753e9c, #630054);
+    background: -o-linear-gradient(top, #753e9c, #630054);
+    padding: 7px 14px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    font-size: 15px;
+    font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+    }
+ button:hover {
+    cursor: pointer;
+    border-top-color: #00044d;
+    background: #00044d;
+    color: #ffffff;
+    }
+ button:active {
+    border-top-color: #1b435e;
+    background: #1b435e;
+    }
